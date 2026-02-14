@@ -159,3 +159,13 @@ div.style.overflow="hidden";
 div.style.backgroundColor="transparent";
 return (div);
 }
+
+/* ===== Safe Event Binding Fix ===== */
+document.addEventListener("DOMContentLoaded", function() {
+    var hearts = document.querySelectorAll(".heart");
+    hearts.forEach(function(h) {
+        h.addEventListener("click", function() {
+            this.classList.add("heartAnimation");
+        });
+    });
+});

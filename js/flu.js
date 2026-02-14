@@ -206,3 +206,12 @@ function createConfetti() {
         confetti.remove();
     }, 5000); // Confetti disappears after 5 seconds
 }
+
+
+/* ===== Prevent Overlay Errors ===== */
+document.addEventListener("DOMContentLoaded", function() {
+    var overlay = document.getElementById("overlay");
+    if (overlay) {
+        overlay.style.display = "none";
+    }
+});
